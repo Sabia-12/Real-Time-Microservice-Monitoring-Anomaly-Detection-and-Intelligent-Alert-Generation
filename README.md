@@ -1,46 +1,110 @@
-# Real-Time Microservice Monitoring: Frontend
+# Real-Time Microservice Monitoring, Anomaly Detection and Intelligent Alert Generation
 
-React + Vite + Tailwind + React Router + Recharts + Lucide. Frontend only; runs in **demo mode** without a backend.
+Real-time microservice monitoring, statistical & ML anomaly detection, intelligent alert aggregation, and incident correlation for the **Google Online Boutique** microservice application.
 
-## Prerequisites
-Node.js 18+ and npm.
+---
 
-## Run
+## Architecture Overview
+
+```
+                                  ┌──────────────────────────────┐
+                                  │   RE2-OB Case Parquet Data   │
+                                  │ (metrics, logs, traces, inj) │
+                                  └──────────────┬───────────────┘
+                                                 │
+                                       [ Replay Engine ]
+                                                 │ (stream rows @ 1s)
+                                                 ▼
+┌───────────────────────┐            ┌───────────────────────────┐
+│ Live Prometheus Scrap │ (Phase 5)  │  Preprocessing & Detector │
+│ (cAdvisor, node-exp)  ├───────────►│ (ZScore-max-7.0 baseline) │
+└───────────────────────┘            └─────────────┬─────────────┘
+                                                   │ Anomaly Event
+                                                   ▼
+                                     ┌───────────────────────────┐
+                                     │       Alert Engine        │
+                                     │ 1. Cooldown Deduplication │
+                                     │ 2. Severity Scoring       │
+                                     │ 3. Log/Trace Enrichment   │
+                                     │ 4. Service Graph Grouping │
+                                     └─────────────┬─────────────┘
+                                                   │
+                       ┌───────────────────────────┴───────────────────────────┐
+                       ▼                                                       ▼
+            ┌───────────────────────┐                               ┌───────────────────────┐
+            │   SQLAlchemy Models   │                               │     FastAPI App       │
+            │  (SQLite Development) │                               │  REST + SSE Stream    │
+            │ Services, Anomalies,  │                               │ /api/services, alerts │
+            │   Alerts, Incidents   │                               │ /api/events (SSE)     │
+            └───────────────────────┘                               └───────────┬───────────┘
+                                                                                │
+                                                                                ▼
+                                                                    ┌───────────────────────┐
+                                                                    │    React Dashboard    │
+                                                                    │  (VITE_API_BASE_URL)  │
+                                                                    └───────────────────────┘
+```
+
+---
+
+## Project Structure
+
+```
+├── backend/
+│   ├── alerts/          # Deduplication, topological incident grouping, severity & enrichment
+│   ├── app/
+│   │   ├── api/         # FastAPI REST endpoints & Server-Sent Events stream
+│   │   ├── db/          # SQLAlchemy models, SQLite session & initial service seeds
+│   │   ├── events.py    # SSE broadcaster hub
+│   │   ├── main.py      # Application entrypoint & CORS middleware
+│   │   └── replay.py    # Historical RE2-OB streaming engine
+│   ├── detection/       # Rolling Z-score baseline, Isolation Forest, OCSVM, LOF detectors
+│   ├── preprocessing/   # Data loader, cleaner, sliding-window feature extractor, splitters
+│   ├── requirements.txt # Python dependencies
+│   └── tests/           # 46 automated unit and integration tests (pytest + httpx)
+├── src/                 # React + Vite dashboard (Pages, Components, Recharts, Lucide)
+├── data/raw/            # RE2-OB benchmark parquet datasets (excluded from git)
+├── data-analysis/       # Evaluation reports and benchmark JSON outputs
+├── docs/                # Architecture documentation, API contracts, evaluation reports
+└── package.json         # Frontend configuration
+```
+
+---
+
+## Quickstart
+
+### 1. Backend Setup & Tests
 ```bash
+# Set up virtual environment
+python -m venv .venv
+source .venv/bin/activate  # Or on Windows: .\.venv\Scripts\Activate.ps1
+
+# Install dependencies
+pip install -r backend/requirements.txt
+
+# Run the test suite (46 passing tests)
+pytest backend/tests -v
+
+# Start the FastAPI server
+uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
+```
+- API Docs: `http://localhost:8000/docs`
+- Health check: `http://localhost:8000/api/health`
+
+### 2. Frontend Setup
+```bash
+# Install frontend dependencies
 npm install
-npm run dev       # http://localhost:5173
-npm run build     # production build in dist/
-npm run preview   # serve the build
+
+# Start Vite development server
+npm run dev
 ```
+- Web Dashboard: `http://localhost:5173`
+- Configured to talk to the backend via `VITE_API_BASE_URL=http://localhost:8000` in `.env`.
 
-## Environment
-Copy `.env.example` to `.env`. `VITE_API_BASE_URL` (e.g. `http://localhost:8000`) points at the Python backend. If empty, the app uses demo data.
-
-## Demo mode
-All data comes from `src/data/mock.js` (deterministic, frozen at a fixed demo timestamp). A banner shows when it is active. Values are synthetic: they are **not** live telemetry or ML detections, and no accuracy/precision/recall figures are shown. Anomaly scores are illustrative. Alert acknowledge/resolve change in-memory state only (reset on reload). Services page status is derived from simple thresholds in `statusOf` (demo only).
-
-## Structure
+### 3. Historical Replay
+Stream any of the 90 real RE2-OB cases at configurable speeds through the preprocessing, detection, and alerting pipeline:
+```bash
+curl -X POST "http://localhost:8000/api/replay/start?case_id=re2ob_checkoutservice_cpu_1&speed=10"
 ```
-src/components/{layout,charts,common,services,alerts}  src/pages  src/services/api.js  src/data/mock.js  src/hooks  src/utils
-```
-Components only call functions in `src/services/api.js`; swapping demo for live needs no UI changes.
-
-## Proposed backend contracts (to be agreed; none exist yet)
-| Function | Request | Response |
-|---|---|---|
-| getDashboardSummary | `GET /api/dashboard/summary?range=15m\|1h\|24h` | `{updatedAt, series:[{t,cpu,memory,latency,errorRate}]}` (t = epoch ms; cpu/memory %, latency ms, errorRate %) |
-| getServices | `GET /api/services` | `[{id,name,status,cpu,memory,latency,errorRate,updatedAt}]` |
-| getServiceDetails | `GET /api/services/{id}?range=` | `{service, series:[...], alerts:[...]}` |
-| getAnomalies | `GET /api/anomalies` | `[{id,service,metric,unit,observed,baseline,severity,detectedAt,score,status}]` |
-| getAlerts | `GET /api/alerts` | `[{id,title,severity,service,metric,timestamp,description,status}]` |
-| acknowledgeAlert / resolveAlert | `POST /api/alerts/{id}/acknowledge` / `/resolve` | updated alert |
-| getIncidents | `GET /api/incidents` | `[{id,start,end,ongoing,durationMin,services,severity,alerts,status,category}]` |
-| getConnectionStatus | `GET /api/health` | any 2xx |
-
-Severity: Critical/Warning/Info. Alert status: Active/Acknowledged/Resolved. Timestamps: epoch ms.
-
-## Limitations / next steps
-- No backend, ML detector or live telemetry yet; endpoint shapes are proposals.
-- Live mode has no authentication, retries or CORS handling (configure CORS on the backend).
-- No ESLint or test setup is included yet.
-- Incident "category" describes observed behavior only; no root-cause diagnosis is shown.
+Live updates stream directly to the dashboard via Server-Sent Events (SSE).

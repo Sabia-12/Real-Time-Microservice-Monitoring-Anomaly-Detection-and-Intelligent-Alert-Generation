@@ -1,5 +1,33 @@
-@"
-node_modules
-dist
+# Dependencies & Environments
+node_modules/
+.venv/
+env/
+venv/
+
+# Build outputs
+dist/
+build/
+
+# Telemetry and raw datasets (large files)
+data/
+
+# Environment variables & secrets
 .env
-"@ | Set-Content .gitignore
+.env.local
+.env.*.local
+
+# Python caches & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+*.db
+*.sqlite3
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

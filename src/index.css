@@ -1,3 +1,74 @@
-@tailwind base; @tailwind components; @tailwind utilities;
-body { @apply bg-[#0b1220] text-slate-200 font-sans antialiased; }
-:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ───────────────────────────────────────────────────────────────────── */
+
+body {
+  @apply bg-[#080f1d] text-slate-200 antialiased;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+code, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 2px;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #080f1d; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+/* ── Glassmorphism card ─────────────────────────────────────────────────────── */
+.glass {
+  background: rgba(17, 26, 46, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Gradient text ──────────────────────────────────────────────────────────── */
+.gradient-text {
+  @apply bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent;
+}
+
+/* ── Sidebar glow ───────────────────────────────────────────────────────────── */
+.sidebar-glow {
+  box-shadow: inset -1px 0 0 rgba(34, 211, 238, 0.06);
+}
+
+/* ── Micro-animation utilities ──────────────────────────────────────────────── */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes zoomIn95 {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-in { animation: fadeIn 0.15s ease-out both; }
+.fade-in { animation-name: fadeIn; }
+.zoom-in-95 { animation-name: zoomIn95; }
+
+/* ── Status dot pulse (critical) ────────────────────────────────────────────── */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── bg-opacity via arbitrary values ─────────────────────────────────────────── */
+.bg-emerald-500\/8 { background-color: rgb(16 185 129 / 0.08); }
+.bg-amber-500\/8   { background-color: rgb(245 158 11 / 0.08); }
+.bg-red-500\/8     { background-color: rgb(239 68 68 / 0.08); }
+.bg-sky-500\/8     { background-color: rgb(14 165 233 / 0.08); }

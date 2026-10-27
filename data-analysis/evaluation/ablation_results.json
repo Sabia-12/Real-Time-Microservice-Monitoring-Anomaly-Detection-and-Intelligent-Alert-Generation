@@ -1,0 +1,1160 @@
+{
+  "instantaneous_only": [
+    {
+      "detector": "ZScore-mean-2.0_instantaneous_only",
+      "f1": 0.29434570728128734,
+      "precision": 0.6149012599836069,
+      "recall": 0.2613846509477577,
+      "fpr": 0.009432870370370371,
+      "delay": 39.0625,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6144101032368132,
+          "mean_recall": 0.5849514563106796,
+          "mean_precision": 0.9116297821238635,
+          "mean_fpr": 0.051041666666666666,
+          "detected": 4,
+          "mean_delay": 11.75
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.45837253228118546,
+          "mean_recall": 0.3623439667128987,
+          "mean_precision": 0.7777777777777778,
+          "mean_fpr": 0.005555555555555556,
+          "detected": 4,
+          "mean_delay": 119.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6891422226384358,
+          "mean_recall": 0.6189320388349515,
+          "mean_precision": 1.0,
+          "mean_fpr": 0.0,
+          "detected": 4,
+          "mean_delay": 12.75
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.004149385531289696,
+          "mean_recall": 0.0020804438280166435,
+          "mean_precision": 1.0,
+          "mean_fpr": 0.0,
+          "detected": 4,
+          "mean_delay": 12.75
+        }
+      }
+    },
+    {
+      "detector": "ZScore-mean-2.5_instantaneous_only",
+      "f1": 0.257100861403407,
+      "precision": 0.5408525189868385,
+      "recall": 0.22821312991215903,
+      "fpr": 0.008449074074074074,
+      "delay": 43.642857142857146,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.587254832680515,
+          "mean_recall": 0.5558252427184466,
+          "mean_precision": 0.8951151139210307,
+          "mean_fpr": 0.049652777777777775,
+          "detected": 4,
+          "mean_delay": 11.75
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.2819362403142758,
+          "mean_recall": 0.21636615811373094,
+          "mean_precision": 0.85,
+          "mean_fpr": 0.0010416666666666667,
+          "detected": 4,
+          "mean_delay": 122.5
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6720290538744046,
+          "mean_recall": 0.5963938973647711,
+          "mean_precision": 1.0,
+          "mean_fpr": 0.0,
+          "detected": 4,
+          "mean_delay": 12.75
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0013850415512465374,
+          "mean_recall": 0.0006934812760055479,
+          "mean_precision": 0.5,
+          "mean_fpr": 0.0,
+          "detected": 2,
+          "mean_delay": 11.5
+        }
+      }
+    },
+    {
+      "detector": "ZScore-mean-3.0_instantaneous_only",
+      "f1": 0.2389874918105355,
+      "precision": 0.5034089348848385,
+      "recall": 0.20821775312066573,
+      "fpr": 0.008275462962962962,
+      "delay": 67.53846153846153,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.5867105531275132,
+          "mean_recall": 0.5544382801664355,
+          "mean_precision": 0.8954536093090311,
+          "mean_fpr": 0.049305555555555554,
+          "detected": 4,
+          "mean_delay": 11.75
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.1975267403016864,
+          "mean_recall": 0.12968099861303745,
+          "mean_precision": 0.875,
+          "mean_fpr": 0.00034722222222222224,
+          "detected": 4,
+          "mean_delay": 191.5
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6489951366583899,
+          "mean_recall": 0.5648404993065188,
+          "mean_precision": 1.0,
+          "mean_fpr": 0.0,
+          "detected": 4,
+          "mean_delay": 12.75
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0006925207756232687,
+          "mean_recall": 0.00034674063800277393,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 14.0
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-5.0_instantaneous_only",
+      "f1": 0.6669750231267345,
+      "precision": 0.5003469812630118,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "delay": 0.0,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-7.0_instantaneous_only",
+      "f1": 0.5119427649619904,
+      "precision": 0.7614156465458374,
+      "recall": 0.46625057790106333,
+      "fpr": 0.0380787037037037,
+      "delay": 26.208333333333332,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.05012680415138688,
+          "mean_recall": 0.026352288488210817,
+          "mean_precision": 0.5552511041403312,
+          "mean_fpr": 0.02222222222222222,
+          "detected": 4,
+          "mean_delay": 10.25
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.031971821480107604,
+          "mean_recall": 0.016643550624133148,
+          "mean_precision": 0.4457437594640481,
+          "mean_fpr": 0.019097222222222224,
+          "detected": 4,
+          "mean_delay": 70.75
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.7290037591572485,
+          "mean_recall": 0.7503467406380028,
+          "mean_precision": 0.830277737665794,
+          "mean_fpr": 0.08958333333333333,
+          "detected": 4,
+          "mean_delay": 8.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.7896410497341521,
+          "mean_recall": 0.7035367545076283,
+          "mean_precision": 0.9325818063530149,
+          "mean_fpr": 0.043402777777777776,
+          "detected": 4,
+          "mean_delay": 50.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.8820988534014742,
+          "mean_recall": 0.8210818307905687,
+          "mean_precision": 0.970571816224265,
+          "mean_fpr": 0.02395833333333333,
+          "detected": 4,
+          "mean_delay": 7.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.588814301847573,
+          "mean_recall": 0.47954230235783635,
+          "mean_precision": 0.834067655427571,
+          "mean_fpr": 0.03020833333333333,
+          "detected": 4,
+          "mean_delay": 11.25
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-10.0_instantaneous_only",
+      "f1": 0.44173821465144975,
+      "precision": 0.779296155225806,
+      "recall": 0.400196486361535,
+      "fpr": 0.01869212962962963,
+      "delay": 55.5,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.015674359134559918,
+          "mean_recall": 0.0079750346740638,
+          "mean_precision": 0.5972222222222222,
+          "mean_fpr": 0.00625,
+          "detected": 4,
+          "mean_delay": 12.75
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.01221886625153548,
+          "mean_recall": 0.0062413314840499305,
+          "mean_precision": 0.3641233766233766,
+          "mean_fpr": 0.008680555555555556,
+          "detected": 4,
+          "mean_delay": 230.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.7251409245011142,
+          "mean_recall": 0.7447988904299584,
+          "mean_precision": 0.8682509109350572,
+          "mean_fpr": 0.07256944444444445,
+          "detected": 4,
+          "mean_delay": 11.5
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.7976316070153882,
+          "mean_recall": 0.6955617198335645,
+          "mean_precision": 0.9756960939919114,
+          "mean_fpr": 0.013541666666666667,
+          "detected": 4,
+          "mean_delay": 58.25
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.8701770206003945,
+          "mean_recall": 0.7961165048543689,
+          "mean_precision": 0.9936241867507425,
+          "mean_fpr": 0.005208333333333333,
+          "detected": 4,
+          "mean_delay": 7.75
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.22958651040570632,
+          "mean_recall": 0.15048543689320387,
+          "mean_precision": 0.8768601408315259,
+          "mean_fpr": 0.005902777777777778,
+          "detected": 4,
+          "mean_delay": 12.75
+        }
+      }
+    }
+  ],
+  "window_only": [
+    {
+      "detector": "ZScore-mean-2.0_window_only",
+      "f1": 0.6663981021403927,
+      "precision": 0.5010084883431059,
+      "recall": 0.9950878409616274,
+      "fpr": 0.992650462962963,
+      "delay": 0.0,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.6669430767451568,
+          "mean_recall": 0.9840499306518724,
+          "mean_precision": 0.5046770923951005,
+          "mean_fpr": 0.9680555555555556,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.6635454435902617,
+          "mean_recall": 0.9864771151178918,
+          "mean_precision": 0.49998591261148706,
+          "mean_fpr": 0.9878472222222222,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        }
+      }
+    },
+    {
+      "detector": "ZScore-mean-2.5_window_only",
+      "f1": 0.28267491570180453,
+      "precision": 0.2609931305045647,
+      "recall": 0.3574895977808599,
+      "fpr": 0.2894097222222222,
+      "delay": 46.5,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.33348751156336726,
+          "mean_recall": 0.5,
+          "mean_precision": 0.2501734906315059,
+          "mean_fpr": 0.5,
+          "detected": 2,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.5789579142466817,
+          "mean_recall": 0.7375173370319001,
+          "mean_precision": 0.5015906377432122,
+          "mean_fpr": 0.49236111111111114,
+          "detected": 3,
+          "mean_delay": 4.666666666666667
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.2124891914807881,
+          "mean_recall": 0.180998613037448,
+          "mean_precision": 0.31402116402116403,
+          "mean_fpr": 0.24409722222222222,
+          "detected": 2,
+          "mean_delay": 220.5
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.5711148769199903,
+          "mean_recall": 0.7264216366158114,
+          "mean_precision": 0.5001734906315058,
+          "mean_fpr": 0.5,
+          "detected": 3,
+          "mean_delay": 3.3333333333333335
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    },
+    {
+      "detector": "ZScore-mean-3.0_window_only",
+      "f1": 0.09424207062329149,
+      "precision": 0.11830181245074863,
+      "recall": 0.0850092464170134,
+      "fpr": 0.013773148148148147,
+      "delay": 163.0,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.2265475430759413,
+          "mean_recall": 0.2461858529819695,
+          "mean_precision": 0.20981087470449172,
+          "mean_fpr": 0.04722222222222222,
+          "detected": 1,
+          "mean_delay": 11.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.13659274193548387,
+          "mean_recall": 0.09396671289875173,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.035416666666666666,
+          "detected": 1,
+          "mean_delay": 450.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.20231213872832368,
+          "mean_recall": 0.16990291262135923,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 28.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-5.0_window_only",
+      "f1": 0.6669750231267345,
+      "precision": 0.5003469812630118,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "delay": 0.0,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-7.0_window_only",
+      "f1": 0.07982482296247723,
+      "precision": 0.11826052735143644,
+      "recall": 0.0733356449375867,
+      "fpr": 0.008506944444444444,
+      "delay": 223.33333333333334,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.2264030612244898,
+          "mean_recall": 0.2461858529819695,
+          "mean_precision": 0.20956316410861867,
+          "mean_fpr": 0.04756944444444444,
+          "detected": 1,
+          "mean_delay": 11.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.055487053020961775,
+          "mean_recall": 0.031206657420249653,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.003472222222222222,
+          "detected": 1,
+          "mean_delay": 631.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.19705882352941176,
+          "mean_recall": 0.16262135922330098,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 28.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-10.0_window_only",
+      "f1": 0.0774712782024448,
+      "precision": 0.11826052735143644,
+      "recall": 0.07027276930189551,
+      "fpr": 0.007928240740740741,
+      "delay": 223.33333333333334,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.2264030612244898,
+          "mean_recall": 0.2461858529819695,
+          "mean_precision": 0.20956316410861867,
+          "mean_fpr": 0.04756944444444444,
+          "detected": 1,
+          "mean_delay": 11.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.055487053020961775,
+          "mean_recall": 0.031206657420249653,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 631.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.18293755496921724,
+          "mean_recall": 0.14424410540915394,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 28.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    }
+  ],
+  "combined": [
+    {
+      "detector": "ZScore-mean-2.0_combined",
+      "f1": 0.6669750231267345,
+      "precision": 0.5003469812630118,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "delay": 0.0,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        }
+      }
+    },
+    {
+      "detector": "ZScore-mean-2.5_combined",
+      "f1": 0.5389941410770368,
+      "precision": 0.490633596317218,
+      "recall": 0.6953305594082293,
+      "fpr": 0.6489583333333333,
+      "delay": 29.952380952380953,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.6544433319558074,
+          "mean_recall": 0.90499306518724,
+          "mean_precision": 0.5160196444776597,
+          "mean_fpr": 0.8597222222222223,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.15442326221610464,
+          "mean_recall": 0.12135922330097088,
+          "mean_precision": 0.24042246900522946,
+          "mean_fpr": 0.2295138888888889,
+          "detected": 2,
+          "mean_delay": 83.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6678277341046975,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5013091869962099,
+          "mean_fpr": 0.9961805555555556,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.4066743678053189,
+          "mean_recall": 0.4455617198335645,
+          "mean_precision": 0.47680594302348933,
+          "mean_fpr": 0.39375,
+          "detected": 3,
+          "mean_delay": 147.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.745450937460148,
+          "mean_recall": 0.9930651872399445,
+          "mean_precision": 0.621352777274751,
+          "mean_fpr": 0.7489583333333333,
+          "detected": 4,
+          "mean_delay": 2.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.605145212920144,
+          "mean_recall": 0.707004160887656,
+          "mean_precision": 0.5878915571259687,
+          "mean_fpr": 0.665625,
+          "detected": 4,
+          "mean_delay": 3.5
+        }
+      }
+    },
+    {
+      "detector": "ZScore-mean-3.0_combined",
+      "f1": 0.13689500058880624,
+      "precision": 0.1547021419009371,
+      "recall": 0.13285945446139621,
+      "fpr": 0.04224537037037037,
+      "delay": 120.75,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.45035483173453317,
+          "mean_recall": 0.48370319001386963,
+          "mean_precision": 0.4282128514056225,
+          "mean_fpr": 0.09930555555555555,
+          "detected": 2,
+          "mean_delay": 13.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.13805220883534136,
+          "mean_recall": 0.09535367545076283,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.15416666666666667,
+          "detected": 1,
+          "mean_delay": 446.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.23296296296296296,
+          "mean_recall": 0.21809986130374479,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 11.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-5.0_combined",
+      "f1": 0.6669750231267345,
+      "precision": 0.5003469812630118,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "delay": 0.0,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.6669750231267345,
+          "mean_recall": 1.0,
+          "mean_precision": 0.5003469812630118,
+          "mean_fpr": 1.0,
+          "detected": 4,
+          "mean_delay": 0.0
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-7.0_combined",
+      "f1": 0.07089107151921221,
+      "precision": 0.07684304399524376,
+      "recall": 0.06836569579288027,
+      "fpr": 0.007581018518518518,
+      "delay": 19.5,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.22727272727272727,
+          "mean_recall": 0.2461858529819695,
+          "mean_precision": 0.21105826397146255,
+          "mean_fpr": 0.04548611111111111,
+          "detected": 1,
+          "mean_delay": 11.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.19807370184254605,
+          "mean_recall": 0.16400832177531208,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 28.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    },
+    {
+      "detector": "ZScore-max-10.0_combined",
+      "f1": 0.06836838037365742,
+      "precision": 0.07684304399524376,
+      "recall": 0.0650716597318539,
+      "fpr": 0.007581018518518518,
+      "delay": 19.5,
+      "by_fault": {
+        "cpu": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "delay": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "disk": {
+          "count": 4,
+          "mean_f1": 0.22727272727272727,
+          "mean_recall": 0.2461858529819695,
+          "mean_precision": 0.21105826397146255,
+          "mean_fpr": 0.04548611111111111,
+          "detected": 1,
+          "mean_delay": 11.0
+        },
+        "loss": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        },
+        "mem": {
+          "count": 4,
+          "mean_f1": 0.18293755496921724,
+          "mean_recall": 0.14424410540915394,
+          "mean_precision": 0.25,
+          "mean_fpr": 0.0,
+          "detected": 1,
+          "mean_delay": 28.0
+        },
+        "socket": {
+          "count": 4,
+          "mean_f1": 0.0,
+          "mean_recall": 0.0,
+          "mean_precision": 0.0,
+          "mean_fpr": 0.0,
+          "detected": 0,
+          "mean_delay": null
+        }
+      }
+    }
+  ]
+}
