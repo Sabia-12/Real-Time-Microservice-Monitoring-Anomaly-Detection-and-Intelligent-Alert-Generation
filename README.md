@@ -89,9 +89,9 @@ Implemented the full alert pipeline: cooldown deduplication, severity scoring (m
 
 Replace the replay engine with a real Prometheus scraper pulling cAdvisor and node-exporter metrics from a running Online Boutique deployment (Docker Compose or Kubernetes). The preprocessing and detector layers will remain unchanged.
 
-### Phase 6 — Cloud / Kubernetes Deployment 🔲 *(planned)*
+### Phase 6 — Cloud / Docker Deployment 🔲 *(planned)*
 
-Containerise all services and deploy to a managed Kubernetes cluster. Add Helm charts, horizontal scaling for the FastAPI workers, and a persistent PostgreSQL store replacing SQLite.
+Containerise all services and deploy to a managed Docker cluster. Add horizontal scaling for the FastAPI workers, and a persistent PostgreSQL store replacing SQLite.
 
 ---
 
